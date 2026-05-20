@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+
+  :root {
+    --scrollbar-track: #0a0e1a;
+    --scrollbar-thumb: #1e2d45;
+    --scrollbar-thumb-hover: #00d4ff40;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: #0a0e1a;
+    color: #e8f0fe;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+  ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
+
+  /* Selection */
+  ::selection { background: rgba(0,212,255,0.2); color: #e8f0fe; }
+}
+
+@layer components {
+  .card {
+    @apply bg-bg-card border border-bg-border rounded-xl shadow-card;
+  }
+
+  .card-elevated {
+    @apply bg-bg-elevated border border-bg-border rounded-xl shadow-card;
+  }
+
+  .btn-primary {
+    @apply bg-accent-cyan text-bg-primary font-semibold px-4 py-2 rounded-lg
+           hover:bg-opacity-90 active:scale-95 transition-all duration-150
+           disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-bg-elevated border border-bg-border text-text-primary font-medium px-4 py-2
+           rounded-lg hover:border-accent-cyan/40 hover:text-accent-cyan
+           active:scale-95 transition-all duration-150;
+  }
+
+  .btn-danger {
+    @apply bg-accent-red/10 border border-accent-red/30 text-accent-red font-medium
+           px-4 py-2 rounded-lg hover:bg-accent-red/20 active:scale-95 transition-all duration-150;
+  }
+
+  .input {
+    @apply bg-bg-elevated border border-bg-border rounded-lg px-3 py-2 text-text-primary
+           placeholder-text-muted outline-none focus:border-accent-cyan/60
+           focus:ring-1 focus:ring-accent-cyan/20 transition-all duration-150 w-full;
+  }
+
+  .label {
+    @apply text-text-secondary text-xs font-medium uppercase tracking-wider mb-1 block;
+  }
+
+  .stat-value {
+    @apply font-display font-semibold text-xl text-text-primary;
+  }
+
+  .stat-label {
+    @apply text-text-muted text-xs uppercase tracking-wider;
+  }
+
+  .badge-green {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium
+           bg-accent-green/10 text-accent-green border border-accent-green/20;
+  }
+
+  .badge-red {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium
+           bg-accent-red/10 text-accent-red border border-accent-red/20;
+  }
+
+  .badge-yellow {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium
+           bg-accent-yellow/10 text-accent-yellow border border-accent-yellow/20;
+  }
+
+  .badge-cyan {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium
+           bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/20;
+  }
+
+  .table-row {
+    @apply border-b border-bg-border hover:bg-bg-elevated/50 transition-colors duration-100;
+  }
+
+  .section-title {
+    @apply font-display font-semibold text-lg text-text-primary;
+  }
+
+  /* Glowing dot indicators */
+  .dot-green {
+    @apply w-2 h-2 rounded-full bg-accent-green shadow-[0_0_6px_rgba(0,255,135,0.8)];
+  }
+  .dot-red {
+    @apply w-2 h-2 rounded-full bg-accent-red shadow-[0_0_6px_rgba(255,59,107,0.8)];
+  }
+  .dot-yellow {
+    @apply w-2 h-2 rounded-full bg-accent-yellow shadow-[0_0_6px_rgba(255,217,0,0.8)];
+  }
+  .dot-gray {
+    @apply w-2 h-2 rounded-full bg-text-muted;
+  }
+}
+
+@layer utilities {
+  .text-gradient-cyan {
+    @apply bg-gradient-to-r from-accent-cyan to-blue-400 bg-clip-text text-transparent;
+  }
+  .text-gradient-green {
+    @apply bg-gradient-to-r from-accent-green to-emerald-400 bg-clip-text text-transparent;
+  }
+  .border-gradient {
+    border-image: linear-gradient(135deg, #00d4ff20, #00ff8720) 1;
+  }
+  .font-mono { font-family: 'JetBrains Mono', monospace; }
+  .font-display { font-family: 'Space Grotesk', sans-serif; }
+}
+
+/* Recharts overrides */
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background: #111827 !important;
+  border: 1px solid #1e2d45 !important;
+  border-radius: 8px !important;
+}
+.recharts-cartesian-axis-tick text { fill: #4a6070 !important; font-size: 11px; }
+.recharts-cartesian-grid line { stroke: #1e2d45 !important; }
