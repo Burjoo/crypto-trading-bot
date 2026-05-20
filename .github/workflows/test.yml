@@ -7,7 +7,6 @@ on:
     branches: [main]
 
 jobs:
-  # ─── Backend Tests ─────────────────────────────────────────────
   backend-test:
     name: Backend (Python 3.11)
     runs-on: ubuntu-latest
@@ -65,7 +64,6 @@ jobs:
           file: backend/coverage.xml
           flags: backend
 
-  # ─── Frontend Tests ────────────────────────────────────────────
   frontend-test:
     name: Frontend (Node 20)
     runs-on: ubuntu-latest
@@ -91,7 +89,6 @@ jobs:
           cd frontend
           VITE_API_URL=http://localhost:8000 npm run build
 
-  # ─── Security Scan ─────────────────────────────────────────────
   security:
     name: Security Scan
     runs-on: ubuntu-latest
