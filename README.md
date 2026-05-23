@@ -1,6 +1,7 @@
 # 🤖 CryptoBot Pro — Automated Trading Platform
 
-<div align="center">
+
+
 
 ![CryptoBot Pro](https://img.shields.io/badge/CryptoBot-Pro-00d4ff?style=for-the-badge&logo=bitcoin&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -21,7 +22,8 @@
 
 | Dashboard | Backtesting | Trading Journal |
 |-----------|-------------|-----------------|
-| ![Dashboard](docs/screenshots/dashboard.png) | ![Backtest](docs/screenshots/backtest.png) | ![Journal](docs/screenshots/journal.png) |
+| ![Dashboard](<img width="1248" height="599" alt="Dashboard" src="https://github.com/user-attachments/assets/6bda9ce3-0039-44e9-a5a9-230f01b40f3a" />) | ![Backtest](<img width="1261" height="594" alt="Backtest" src="https://github.com/user-attachments/assets/17f81ee7-fd70-43b9-a02b-53ce97271a14" />) | ![Journal](<img width="1257" height="599" alt="Journal" src="https://github.com/user-attachments/assets/7c9ea01e-0be8-4715-b12a-2ef5cedbef8d" />
+) |
 
 ---
 
