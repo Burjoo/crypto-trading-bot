@@ -24,7 +24,7 @@
 
 | Dashboard | Backtesting | Trading Journal |
 |-----------|-------------|-----------------|
-| ![Dashboard](https://ibb.co/ZzHhjMDT) | ![Backtest](https://ibb.co/CKrQGC0p) | ![Journal](https://ibb.co/RGjk0pXx) |
+| ![Dashboard]([https://ibb.co/ZzHhjMDT](https://kommodo.ai/i/7M5VGdVgh7vX26KyfccP)) | ![Backtest](https://kommodo.ai/i/741NbytP502c82kfJdoY) | ![Journal](https://kommodo.ai/i/ICWaPMSE5NmaB5mSK25S) |
 
 ---
 
